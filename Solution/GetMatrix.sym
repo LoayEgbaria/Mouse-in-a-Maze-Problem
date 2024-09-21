@@ -1,0 +1,10 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	FinishGetMatrix         39E7
+//	GetMatrix               39C4
+//	GetMatrixIllegalNum     39DC
+//	GetMatrixLoop           39D5
+//	GetMatrixSkip           39DD
+//	GetMatrix_GetNum        39EF
+//	GetMatrix_Mul           39F0
+//	TheMatrixIsFull         39E2

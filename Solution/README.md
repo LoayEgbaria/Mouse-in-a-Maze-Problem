@@ -1,8 +1,8 @@
-# Mouse in a Maze Problem (Assembly Backtracking)
+# Mouse in a Maze Problem (Backtracking)
 
 ## Overview
 
-In this exercise, you will solve the classic "Mouse in a Maze" problem using exhaustive search (backtracking brute force), implemented exclusively through functions. Functions must adhere to a consistent coding convention.
+In this exercise, you will solve the classic "Mouse in a Maze" problem using exhaustive search (backtracking brute force), implemented exclusively through functions. No subroutines are allowed in the solution. Functions must adhere to a consistent coding convention.
 
 
 ## Problem Definition
@@ -156,3 +156,6 @@ OH NO! It seems the mouse has no luck in this maze.
 ## Bonus Feature
 
 If implemented, the program will find all possible solutions for the maze, instead of being limited to 3 solutions.
+
+
+

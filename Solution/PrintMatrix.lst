@@ -1,0 +1,56 @@
+(0000) 3B54  0011101101010100 (   4)                 .ORIG x3B54
+(3B54) 1DBA  0001110110111010 (   8) PrintMatrix     ADD   R6 R6 #-6
+(3B55) 7380  0111001110000000 (  11)                 STR   R1 R6 #0
+(3B56) 7581  0111010110000001 (  12)                 STR   R2 R6 #1
+(3B57) 7782  0111011110000010 (  13)                 STR   R3 R6 #2
+(3B58) 7983  0111100110000011 (  14)                 STR   R4 R6 #3
+(3B59) 7B84  0111101110000100 (  15)                 STR   R5 R6 #4
+(3B5A) 7F85  0111111110000101 (  16)                 STR   R7 R6 #5
+(3B5B) 6786  0110011110000110 (  18)                 LDR   R3 R6 #6
+(3B5C) 6987  0110100110000111 (  19)                 LDR   R4 R6 #7
+(3B5D) 1320  0001001100100000 (  21)                 ADD   R1 R4 #0
+(3B5E) 79BE  0111100110111110 (  29)                 STR   R4 R6 #-2
+(3B5F) 79BF  0111100110111111 (  30)                 STR   R4 R6 #-1
+(3B60) 1DBE  0001110110111110 (  31)                 ADD   R6 R6 #-2
+(3B61) 2A28  0010101000101000 (  32)                 LD    R5 PrintMatrix_Mul
+(3B62) 4140  0100000101000000 (  33)                 JSRR  R5
+(3B63) 1DA2  0001110110100010 (  34)                 ADD   R6 R6 #2
+(3B64) 1820  0001100000100000 (  36)                 ADD   R4 R0 #0
+(3B65) 1460  0001010001100000 (  37)                 ADD   R2 R1 #0
+(3B66) 60C0  0110000011000000 (  40) PrintMatrixLoop LDR   R0 R3 #0
+(3B67) 2A21  0010101000100001 (  43)                 LD    R5 PrintMatrix_MinusStarAscii
+(3B68) 1A05  0001101000000101 (  44)                 ADD   R5 R0 R5
+(3B69) 0A03  0000101000000011 (  45)                 BRNP  NotStar
+(3B6A) 201D  0010000000011101 (  46)                 LD    R0 PrintMatrix_StarAscii
+(3B6B) F021  1111000000100001 (  47)                 TRAP  x21
+(3B6C) 0E04  0000111000000100 (  48)                 BRNZP CheckIfPrintEnter
+(3B6D) 60C0  0110000011000000 (  51) NotStar         LDR   R0 R3 #0
+(3B6E) 2A16  0010101000010110 (  53)                 LD    R5 PrintMatrix_ZeroAscii
+(3B6F) 1005  0001000000000101 (  54)                 ADD   R0 R0 R5
+(3B70) F021  1111000000100001 (  55)                 TRAP  x21
+(3B71) 14BF  0001010010111111 (  61) CheckIfPrintEnter ADD   R2 R2 #-1
+(3B72) 0A04  0000101000000100 (  62)                 BRNP  PrintSpace
+(3B73) 2013  0010000000010011 (  63)                 LD    R0 PrintMatrix_EnterAscii
+(3B74) F021  1111000000100001 (  64)                 TRAP  x21
+(3B75) 1460  0001010001100000 (  65)                 ADD   R2 R1 #0
+(3B76) 0E02  0000111000000010 (  66)                 BRNZP UpdateR3
+(3B77) 200E  0010000000001110 (  69) PrintSpace      LD    R0 PrintMatrix_SpaceAscii
+(3B78) F021  1111000000100001 (  70)                 TRAP  x21
+(3B79) 16E1  0001011011100001 (  73) UpdateR3        ADD   R3 R3 #1
+(3B7A) 193F  0001100100111111 (  74)                 ADD   R4 R4 #-1
+(3B7B) 0401  0000010000000001 (  75)                 BRZ   FinishPrintMatrix
+(3B7C) 0FE9  0000111111101001 (  76)                 BRNZP PrintMatrixLoop
+(3B7D) 6F85  0110111110000101 (  80) FinishPrintMatrix LDR   R7 R6 #5
+(3B7E) 6B84  0110101110000100 (  81)                 LDR   R5 R6 #4
+(3B7F) 6983  0110100110000011 (  82)                 LDR   R4 R6 #3
+(3B80) 6782  0110011110000010 (  83)                 LDR   R3 R6 #2
+(3B81) 6581  0110010110000001 (  84)                 LDR   R2 R6 #1
+(3B82) 6380  0110001110000000 (  85)                 LDR   R1 R6 #0
+(3B83) 1DA6  0001110110100110 (  88)                 ADD   R6 R6 #6
+(3B84) C1C0  1100000111000000 (  90)                 RET   
+(3B85) 0030  0000000000110000 (  92) PrintMatrix_ZeroAscii .FILL x0030
+(3B86) 0020  0000000000100000 (  93) PrintMatrix_SpaceAscii .FILL x0020
+(3B87) 000A  0000000000001010 (  94) PrintMatrix_EnterAscii .FILL x000A
+(3B88) 002A  0000000000101010 (  95) PrintMatrix_StarAscii .FILL x002A
+(3B89) FFD6  1111111111010110 (  96) PrintMatrix_MinusStarAscii .FILL xFFD6
+(3B8A) 3898  0011100010011000 (  97) PrintMatrix_Mul .FILL x3898

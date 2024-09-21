@@ -1,0 +1,36 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	CheckIsItSafe           3D80
+//	CheckStar               3D73
+//	ConvertTheCellToOne     3DDD
+//	DownCell                3DA7
+//	EnteredNo               3D72
+//	EnteredYes              3D66
+//	FinishIsItSafe          3E84
+//	FinishSolve             3C9F
+//	FinishSolveMaze         3DFC
+//	IsItSafe                3E5C
+//	IsItSafe_Mul            3E8C
+//	LeftCell                3DCB
+//	MSG5                    3CA6
+//	MSG6                    3CEF
+//	MSG7                    3E0C
+//	MSG8                    3E33
+//	Minus_N                 3E0A
+//	Minus_Y                 3E08
+//	Minus_n                 3E0B
+//	Minus_y                 3E09
+//	PrintedASolution        3C9A
+//	RETURN_MinusOne_SolveMaze3DF9
+//	RETURN_One_SolveMaze    3DF3
+//	RETURN_Two_SolveMaze    3DF6
+//	RETURN_Zero_IsItSafe    3E83
+//	RETURN_Zero_SolveMaze   3DF1
+//	RightCell               3D95
+//	Solve                   3C80
+//	SolveMaze               3D23
+//	SolveMaze_MinusStarASCII3E07
+//	SolveMaze_Mul           3E04
+//	SolveMaze_PrintMatrix   3E05
+//	SolveMaze_StarASCII     3E06
+//	UpCell                  3DB9
